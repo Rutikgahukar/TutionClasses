@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="OtpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="#F4F2F2"
+        android:layout_marginBottom="20dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/leftarrow"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:clickable="true" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_imagecard"
+        android:src="@drawable/otploginimg"
+        android:padding="15dp" />
+
+    <TextView
+        android:id="@+id/instructionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:padding="6dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/userloginnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otpinfo"
+        android:textSize="12sp"
+        android:background="@drawable/corenerstroke"
+        android:textColor="@color/fentgreencolor"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="3dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/IndiaMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91-12989200823"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:padding="6dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:id="@+id/otplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+    <EditText
+        android:id="@+id/otpDigitone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:inputType="phone"
+        android:hint="0"
+        android:maxLength="1"
+        android:textColor="@color/fentgreencolor"
+        android:background="@drawable/cornerbackground"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"/>
+        <EditText
+            android:id="@+id/otpDigittwo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:hint="0"
+            android:maxLength="1"
+            android:textColor="@color/fentgreencolor"
+            android:background="@drawable/cornerbackground"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <EditText
+            android:id="@+id/otpDigitthree"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:hint="0"
+            android:maxLength="1"
+            android:textColor="@color/fentgreencolor"
+            android:background="@drawable/cornerbackground"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <EditText
+            android:id="@+id/otpDigitfour"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:hint="0"
+            android:maxLength="1"
+            android:textColor="@color/fentgreencolor"
+            android:background="@drawable/cornerbackground"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ResendOtpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10sp">
+    <TextView
+        android:id="@+id/OtpresendInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't receive the OTP?"
+        android:textSize="12sp"
+        android:paddingTop="2dp"
+        android:paddingBottom="3dp"
+        android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/OtpResendCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESEND"
+            android:textStyle="bold"
+            android:textColor="@color/fentgreencolor"
+            android:textSize="12sp"
+            android:paddingLeft="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="3dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/LoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/buttonbackground" />
+
+</LinearLayout>

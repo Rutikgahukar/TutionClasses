@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cardwhite"
+    tools:context=".FirstNameScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/Cardwhite">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/WhatsupColor"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <ImageView
+                android:id="@+id/FiestNamebackArrow"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/leftarrow"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/userProfileicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@drawable/circular_background"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/SelectedUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Rutik"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@android:color/white"
+            android:background="@drawable/backarrow_background"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:tabMode="fixed"
+            app:tabGravity="fill">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabStudentDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Updates" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabCurrentAffairs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Affairs" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+    </LinearLayout>
+</FrameLayout>
